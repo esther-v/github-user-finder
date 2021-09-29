@@ -6,7 +6,7 @@
 
 body {
   background: #152135;
-  color: #f1f1f1;
+  color: #c4c4c4;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -44,14 +44,14 @@ form input, form button {
 form input {
   background: none;
   width: 70%;
-  color: #f1f1f1;
-  place-content: #f1f1f1;
+  color: #c4c4c4;
+  place-content: #c4c4c4;
   font-size: 16px;
 }
 form button {
   background: #2678dc;
   padding: 10px 16px;
-  color: #f1f1f1;
+  color: #c4c4c4;
   border-radius: 5px;
 }
 form i {
@@ -60,7 +60,7 @@ form i {
 }
 
 ::placeholder {
-  color: #f1f1f1;
+  color: #c4c4c4;
   opacity: 1;
 }
 
@@ -72,17 +72,15 @@ form i {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid red;
+  border-radius: 20%;
   margin-right: 20px;
   background-color: grey;
 }
 .box-user .infos {
-  border: 1px solid blue;
   width: 100%;
 }
 .box-user .infos .general h2 {
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 .box-user .infos .general .username {
   color: #2678dc;
@@ -104,6 +102,13 @@ form i {
 .box-user .infos .follow div > p:nth-child(2) {
   font-size: 20px;
   font-weight: bold;
+}
+.box-user .infos .links i {
+  width: 30px;
+  font-size: 18px;
+}
+.box-user .infos .city {
+  margin-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

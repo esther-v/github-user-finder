@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-$white : #f1f1f1;
+$white : #c4c4c4;
 $blue: rgb(38, 120, 220);
 
 body{
@@ -69,23 +69,20 @@ form{
 .box-user{
     display:flex;
     padding: 30px;
-
     img{
         width: 100px;
         height: 100px;
         object-fit: cover;
-        border-radius: 50%;
-        border: 1px solid red;
+        border-radius: 20%;
         margin-right: 20px;
         background-color: grey;
     }
     
     .infos{
-        border: 1px solid blue;
         width: 100%;
         .general{
             h2{
-                letter-spacing: 2px;
+                letter-spacing: 1.5px;
             }
             .username{
                 color: $blue;
@@ -108,6 +105,13 @@ form{
                 font-size: 20px;
                 font-weight: bold;
             }
+        }
+        .links i{
+            width: 30px;
+            font-size: 18px;
+        }
+        .city{
+            margin-bottom: 5px;
         }
     }
     
