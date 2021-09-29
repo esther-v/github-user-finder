@@ -1,0 +1,45 @@
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+$white : #f1f1f1;
+
+.follow{
+    @extend %flex;   
+}
+
+body{
+    background: rgb(21, 33, 53);
+    color: #f1f1f1;
+    @extend %flex;
+    flex-direction: column;
+}
+form, .box-user{
+    background: rgb(42, 61, 93);
+    width: 500px;
+    padding: 15px;
+    border-radius: 7px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    input, button{
+        border: none;
+        outline: none;
+    }
+    input{
+        background: none;
+        width: 60%;
+        color: $white;
+        font-size: 18px;
+    }
+    button{
+        background: rgb(38, 120, 220);
+        padding: 10px 16px;
+        color: $white;
+        border-radius: 5px;
+    }
+}
