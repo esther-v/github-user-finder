@@ -1,18 +1,31 @@
-body, .follow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: #152135;
   color: #f1f1f1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
+  font-family: "Space Mono", monospace;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 100px;
+}
+.container h1 {
+  margin-bottom: 30px;
+  font-size: 25px;
 }
 
 form, .box-user {
-  background: #2a3d5d;
-  width: 500px;
+  background: #1f304d;
+  width: 550px;
   padding: 15px;
   border-radius: 7px;
 }
@@ -26,18 +39,71 @@ form {
 form input, form button {
   border: none;
   outline: none;
+  font-family: "Space Mono", monospace;
 }
 form input {
   background: none;
-  width: 60%;
+  width: 70%;
   color: #f1f1f1;
-  font-size: 18px;
+  place-content: #f1f1f1;
+  font-size: 16px;
 }
 form button {
   background: #2678dc;
   padding: 10px 16px;
   color: #f1f1f1;
   border-radius: 5px;
+}
+form i {
+  color: #2678dc;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: #f1f1f1;
+  opacity: 1;
+}
+
+.box-user {
+  display: flex;
+  padding: 30px;
+}
+.box-user img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid red;
+  margin-right: 20px;
+  background-color: grey;
+}
+.box-user .infos {
+  border: 1px solid blue;
+  width: 100%;
+}
+.box-user .infos .general h2 {
+  letter-spacing: 2px;
+}
+.box-user .infos .general .username {
+  color: #2678dc;
+  margin-bottom: 20px;
+}
+.box-user .infos .follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #152135;
+  border-radius: 5px;
+  margin: 25px auto;
+}
+.box-user .infos .follow div > p:first-child {
+  font-size: 14px;
+}
+.box-user .infos .follow div > p:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

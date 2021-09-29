@@ -1,23 +1,34 @@
-%flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 $white : #f1f1f1;
-
-.follow{
-    @extend %flex;   
-}
+$blue: rgb(38, 120, 220);
 
 body{
     background: rgb(21, 33, 53);
-    color: #f1f1f1;
-    @extend %flex;
+    color: $white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
+    font-family: 'Space Mono', monospace;
+    height: 100vh;
 }
+
+.container{
+    margin-top: 100px;
+    h1{
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+}
+
+
 form, .box-user{
-    background: rgb(42, 61, 93);
-    width: 500px;
+    background: rgb(31, 48, 77);
+    width: 550px;
     padding: 15px;
     border-radius: 7px;
 }
@@ -29,12 +40,16 @@ form{
     input, button{
         border: none;
         outline: none;
+        font-family: 'Space Mono', monospace;
     }
     input{
         background: none;
-        width: 60%;
+        width: 70%;
         color: $white;
-        font-size: 18px;
+        place-content: $white;
+        font-size: 16px;
+        
+
     }
     button{
         background: rgb(38, 120, 220);
@@ -42,4 +57,58 @@ form{
         color: $white;
         border-radius: 5px;
     }
+    i{
+        color: rgb(38, 120, 220);
+        font-size: 18px;
+    }
+}
+::placeholder{
+    color: $white;
+    opacity: 1;
+}
+.box-user{
+    display:flex;
+    padding: 30px;
+
+    img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid red;
+        margin-right: 20px;
+        background-color: grey;
+    }
+    
+    .infos{
+        border: 1px solid blue;
+        width: 100%;
+        .general{
+            h2{
+                letter-spacing: 2px;
+            }
+            .username{
+                color: $blue;
+                margin-bottom: 20px;
+            }
+        }
+        .follow{
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            width: 100%;
+            padding: 10px 20px;
+            background-color: rgb(21, 33, 53);
+            border-radius: 5px;
+            margin: 25px auto;
+            div > p:first-child{
+                font-size: 14px;
+            }
+            div > p:nth-child(2){
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    
 }
