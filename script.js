@@ -78,3 +78,4 @@ const errorMessage = (msg) => {
     errorMsg.style.display = 'block'
     errorMsg.textContent = msg;
 }
+

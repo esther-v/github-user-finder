@@ -119,4 +119,21 @@ form i {
   margin-bottom: 5px;
 }
 
+@media screen and (max-width: 620px) {
+  form, .box-user {
+    width: 300px;
+  }
+  form input, .box-user input {
+    font-size: 11px;
+  }
+  form .fa-search, .box-user .fa-search {
+    display: none;
+  }
+
+  .box-user {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

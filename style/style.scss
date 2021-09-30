@@ -29,8 +29,6 @@ body{
         display: none;
     }
 }
-
-
 form, .box-user{
     background: rgb(31, 48, 77);
     width: 550px;
@@ -53,11 +51,9 @@ form{
         color: $white;
         place-content: $white;
         font-size: 16px;
-        
-
     }
     button{
-        background: rgb(38, 120, 220);
+        background: $blue;
         padding: 10px 16px;
         color: white;
         border-radius: 5px;
@@ -66,7 +62,7 @@ form{
         }
     }
     i{
-        color: rgb(38, 120, 220);
+        color: $blue;
         font-size: 18px;
     }
 }
@@ -85,7 +81,6 @@ form{
         margin-right: 20px;
         background-color: grey;
     }
-    
     .infos{
         width: 100%;
         .general{
@@ -121,6 +116,21 @@ form{
         .city{
             margin-bottom: 5px;
         }
+    }   
+}
+
+@media screen and (max-width: 620px) {
+    form, .box-user{
+        width: 300px;
+        input{
+            font-size: 11px;
+        }
+        .fa-search{
+            display: none;
+        }
     }
-    
+    .box-user{
+        flex-direction: column;
+        padding: 10px;
+    }  
 }
