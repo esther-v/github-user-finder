@@ -22,6 +22,11 @@ body {
   margin-bottom: 30px;
   font-size: 25px;
 }
+.container .error-msg {
+  color: red;
+  margin: 0 0 5px 15px;
+  display: none;
+}
 
 form, .box-user {
   background: #1f304d;
@@ -51,8 +56,11 @@ form input {
 form button {
   background: #2678dc;
   padding: 10px 16px;
-  color: #c4c4c4;
+  color: white;
   border-radius: 5px;
+}
+form button:hover {
+  background: #324c6c;
 }
 form i {
   color: #2678dc;

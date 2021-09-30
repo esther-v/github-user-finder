@@ -23,6 +23,11 @@ body{
         margin-bottom: 30px;
         font-size: 25px;
     }
+    .error-msg{
+        color:red;
+        margin: 0 0 5px 15px;
+        display: none;
+    }
 }
 
 
@@ -54,8 +59,11 @@ form{
     button{
         background: rgb(38, 120, 220);
         padding: 10px 16px;
-        color: $white;
+        color: white;
         border-radius: 5px;
+        &:hover{
+            background: rgb(50, 76, 108);
+        }
     }
     i{
         color: rgb(38, 120, 220);

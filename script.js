@@ -2,6 +2,7 @@ const apiURL = "https://api.github.com/users/";
 const form = document.querySelector('form');
 const search = document.querySelector('input');
 const userBox = document.querySelector('.box-user');
+const errorMsg = document.querySelector('.error-msg');
 
 //call api
 async function dataGithub(user){
@@ -9,15 +10,22 @@ async function dataGithub(user){
     const response = await fetch(`${apiURL}${user}`);
     const data = await response.json();
 
-    console.log(data);
-
-    createBox(data);
+    // console.log(data);
+    if(response.status == 404){
+        errorMsg.style.display = 'block'
+        errorMsg.textContent = "...No user found"
+        userBox.style.display = "none"
+    } else {
+        createBox(data);
+        errorMsg.style.display = 'none'
+        userBox.style.display = "flex"
+    }
+    
 }
 
-dataGithub("esther-v")
+dataGithub("esther-v");
 
 //display api data in box user
-
 const createBox = (user) => {
 
     const box = `
@@ -49,4 +57,24 @@ const createBox = (user) => {
     </div>
     `;
     userBox.innerHTML = box;
+}
+
+//search
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchValue = search.value;
+    if(searchValue === ""){
+        errorMessage('...Search cannot be empty');
+        userBox.style.display = "none"
+    } else {
+        dataGithub(searchValue);
+        search.value = "";
+    }
+})
+
+//error message function
+const errorMessage = (msg) => {
+    errorMsg.style.display = 'block'
+    errorMsg.textContent = msg;
 }
